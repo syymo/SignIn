@@ -1,0 +1,389 @@
+
+.headers{
+	height:50px;
+	line-height:45px;
+	width:100%;
+	background:#25313e;
+	color:#adbece;
+}
+.logo img{
+	width:40px;
+	/* padding-top:13px; */
+	vertical-align:middle;
+	margin-left:30px;
+}
+.logo img:hover{
+	width:35px;
+}
+.logo h3{
+	/* color:#adbece; */
+	margin-left:5px;
+	margin-top:17px;
+}
+.logo h3:hover{
+	color:#fff;
+}
+.adminInfo img{
+	height:35px;
+	line-height:35px; 
+	width:35px;
+	border-radius:35px;
+	vertical-align:middle;
+	/* position:relative; */
+}
+.adminInfo a{
+	/* display:block; */
+	/* float:right; */
+	height:35px;
+	line-height:35px;
+	/* margin-top:10px; */
+	margin-right:10px;
+	color:red;
+	/* position:absolute;
+	top:0;
+	right:8px; */
+}
+.mainLeft{
+	padding:10px 0 0 10px;
+	width:200px;
+	/* height:600px; */
+	/* background:#E9DEDE; */
+	border:1px solid #e8e8e8;
+}
+.mainLeft .nav{
+	margin-bottom:200px;
+}
+.btn-addInfo{
+	margin-top:3px;
+	margin-left:5px;
+}
+.mainLeft .nav_menu{
+	background:##e8e8e8;
+	line-height:50px; 
+	border-bottom:1px solid #D7D9D7;
+	font-size:15px;
+	font-weight:bold;
+	/* box-shadow: 0 0 5px rgba(0, 203, 238, 1);
+	-webkit-box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+	-moz-box-shadow: 0 0 5px rgba(81, 203, 238, 1); */
+}
+.mainLeft .nav_menu a{
+	display:inline-block;
+	width:200px;
+	height:100%;
+	text-indent:40px;
+}
+.mainLeft .nav_menu li:hover,.mainLeft .nav_menu a:hover{
+	background:#CEB8EE;
+	cursor:pointer;
+}
+.nav_list{
+	display:none;
+} 
+.nav_list li{
+	font-size:13px;
+	background:#C5DDD1;
+	border-bottom:1px solid red;
+}
+.mainLeft .nav_list li a:hover{
+	background:#000;
+	color:#fff;
+}
+.show{
+	display: block;
+}
+.hide{
+	display: none;
+}
+.mainRight{
+	padding-left:225px;
+	/* border:1px solid #ccc; */
+
+}
+#icontent{
+	width:100%;
+	/* height:500px; */
+}
+.mainRight h2{
+	/* margin-left:100px; */
+	/* width:120px; */
+}
+.mainRight table{
+	background:#fff;
+	border:1px solid #D0D0D0;
+	border-radius:5px;
+	width:100%;
+	border-collapse:separate;
+	/* display:inline-block; */
+}
+.mainRight tr td{
+	padding:0;
+	font-size:17px;
+	border:1px solid #D0D0D0;
+	border-radius:3px;
+	/* float:left; */
+	/* width:10%; */
+	height:30px;
+	line-height:30px; 
+	text-align:center;
+	vertical-align: middle;
+}
+.mainRight tr:hover{
+	border-color:#808080;
+	background:#E0E0E0;
+}
+.mainRight .operation{
+	width:50px;
+}
+.mainRight .sign{
+	width:60px;
+}
+#d1{
+	display:block;
+}
+#d2{
+	display:none;
+}
+#d3{
+	display:none;
+}
+.mainRight .page{
+	margin-top:10px;
+	margin-left:30%;
+
+}
+.mainRight .page a,.pageNum,.page_btn{
+	font-size:16px;
+	margin-bottom:10px;
+	display:inline-block;
+	margin:0 5px;
+	padding:0 5px;
+	height:40px;
+	width:40px;
+	line-height:40px;
+	text-align:center;
+	border:2px solid #ccc;
+	background:#fff;
+	border-radius:5px;
+}
+.mainRight .page a:hover{
+	background:#ccc;
+	text-decoration:none;
+}
+.mainRight .table{
+	/* border:1px solid #ccc; */
+}
+.mainRight .table td button,.searchtable td button{
+	padding:0;
+	font-size:12px;
+	width:42px;
+	height:24px;
+	vertical-align: middle;
+}
+.mainRight{
+	width:90%;
+}
+.mainRight .InfoSearch{
+	padding-top:20px;
+}
+.mainRight .InfoSearch input{
+	/* margin-top:20px; */
+	padding:3px 5px;
+	padding-right:27px;
+	text-indent:5px;
+	border-radius:15px;
+}
+.mainRight .InfoSearch i{
+	margin-left:-20px;
+}
+.mainRight .pageNum{
+	width:30px;
+}
+.mainRight .page_btn{
+	cursor:pointer;
+}
+.mainRight h1{
+	padding-top:10px;
+}
+
+.addInfo p{
+	font-size:16px;
+	margin:27px 50px;
+	/* text-indent:30px;  */
+}
+.addInfo input,select{
+	/* text-indent:3px; */
+	padding:0 2px;
+	border:1px solid #ccc;
+	border-radius:5px;
+	/* width:200px; */
+	font-size:15px; 
+	/* font-size:20px; */
+}
+/* .addInfo input:focus{
+	border:1px solid #1C2CE2;
+	border-radius:5px;
+} */
+
+
+.userSex input{
+	width:18px;
+	height:15px;
+	margin:2px 10px;
+}
+/* .btn{
+	font-size:12px;
+	width:36px;
+	height:24px;
+} */
+label{
+	font-weight: normal;
+}
+
+
+
+.signin{
+	height:100%;
+	margin-left: 5px;
+    padding-top: 13px;
+	width:1020px;
+	/* margin:0 auto; */
+}
+.signinright,.signinleft{
+	width:800px;
+	height:100%;
+	display:block;
+	background:#FFFFFF;
+	border-radius:30px;
+	/* width:800px; */
+}
+.startSign{
+	font-size:18px;
+	float:left;
+	margin-top:19px;
+}
+.signin .signintitle{
+	margin-left:308px;
+	font-size:25px;
+}
+.signin label{
+	margin-left:10px;
+	margin:0 auto;
+	font-size:18px;
+}
+.signin label input{
+
+	/* height:26px; */
+	border:1px solid #ccc;
+	text-indent:5px;
+}
+.signin label button{
+	border-radius:3px;
+	font-size:15px;
+	height:24px;
+	
+}
+.signin label select{
+	border-radius:0px;
+
+}
+.signin label input:hover{
+	border-color:#AC73E4;
+}
+.signin label input:focus{
+	border-color:#FE174A;
+}
+.signin .signname{
+	width:156px;
+}
+.signin .starttime,.stoptime{
+	width:58px;
+}
+.signin .distance{
+	width:127px;
+}
+.signin .signintime{
+	padding:20px;
+	border-right:1px solid #ccc;
+}
+.signin .signintime label h3{
+	margin-top:6px;
+}
+
+.signin .signintime,.signinway{
+	width:380px;
+	/* border:1px solid #ccc; */
+}
+.signin .signinway label{
+	width:345px;
+}
+.signin .signintime,.signin .signinway{
+	padding:0 20px;
+	height:373px;
+	padding-left:35px;
+	margin-bottom: 20px;
+}
+.signin .signinway label{
+	border-bottom:2px dotted #AD2B2B;
+}
+.signin .signinway .location{
+	padding-top:10px;
+}
+.signinway .radius{
+	width:93px;
+}
+.signin .singbtn{
+	margin-top:10px;
+	margin-left:225px;
+}
+.signintime .addsigntime{
+	color:#EA2E2E;
+	margin-left:200px;
+	font-weight:bold;  
+}
+.signin .signinway span{
+	font-weight:bold;
+	color:#F32828;
+}
+.signin .addsigninway{
+	font-size:16px;
+	color:#A56DF2;
+}
+.signin .signinwaylable{
+	/* padding-right:26px;*/
+	} 
+.signinright{
+	margin-top:10px;
+	/* padding-bottom:10px;  */
+	width:800px;
+	text-align:center; 
+}
+.signinright h1{
+
+}
+.signinright .signtime{
+	margin:0 auto;
+}
+.signinright .signtime{
+	margin-bottom:35px;
+}
+.h_2{
+	height:3px;
+}
+.highlight{
+	color:red;
+	font-weight:bold;
+}
+
+@media screen and (max-width: 1000px) {
+  	.mainRight {
+        padding-left: 0;
+    }
+
+}
+@media screen and (max-width: 850px) {
+    .signin .signintitle{
+		margin-left:150px;
+	}
+
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>点名宝——管理员</title>
+	 <!--滑动开关-->
+	<link rel="stylesheet" type="text/css" href="../assets/css/styles.css" />
+
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="icon" type="image/png" href="../assets/i/favicon.png">
+    <link rel="stylesheet" href="../assets/css/amazeui.min.css" />
+    <link rel="stylesheet" href="../assets/css/admin.css">
+    <link rel="stylesheet" href="../assets/css/app.css">
+    <script src="../assets/js/echarts.min.js"></script>
+	<script type="text/javascript" src="../http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/index.js"></script>
+	
+
+    <link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+	<div class="headers clearfix">
+		<div class="logo fl">
+			<img src="images/logo.png">
+			<h3 class="fr">点名宝</h3>
+		</div>
+		<div class="adminInfo fr">
+			<img src="images/4.jpg">
+			<a href="#">管理员</a>
+		</div>
+	</div>
+	<div class="middle clearfix">
+		<div class="mainLeft fl">
+			<div class="tpl-left-nav tpl-left-nav-hover">
+            <div class="tpl-left-nav-title">
+            </div>
+            <div class="tpl-left-nav-list">
+                <ul class="tpl-left-nav-menu">
+                    <li class="tpl-left-nav-item">
+                        <a href="index.html" class="nav-link active">
+                            <i class="am-icon-home"></i>
+                            <span>首页</span>
+                        </a>
+                    </li>
+                    <li class="tpl-left-nav-item"  onclick="Tab(2)">
+                        <a href="#" class="nav-link tpl-left-nav-link-list">
+                            <i class="am-icon-bar-chart"></i>
+                            <span>签到</span>
+                            
+                        </a>
+                    </li>
+
+                    <li class="tpl-left-nav-item">
+                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                            <i class="am-icon-table"></i>
+                            <span>表格</span>
+                            <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                        </a>
+                        <ul class="tpl-left-nav-sub-menu">
+                            <li>
+                                <a href="#">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>文字表格</span>
+                                    <i class="am-icon-star tpl-left-nav-content-ico am-fr am-margin-right"></i>
+                                </a>
+
+                                <a href="javascript:;">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>图片表格</span>
+                                    <i class="tpl-left-nav-content tpl-badge-success">
+               18
+             </i>
+
+                                    <a href="javascript:;">
+                                        <i class="am-icon-angle-right"></i>
+                                        <span>消息列表</span>
+                                        <i class="tpl-left-nav-content tpl-badge-primary">
+               5
+             </i>
+
+
+                                        <a href="javascript:;">
+                                            <i class="am-icon-angle-right"></i>
+                                            <span>文字列表</span>
+
+                                        </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="tpl-left-nav-item">
+                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                            <i class="am-icon-wpforms"></i>
+                            <span>表单</span>
+                            <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right tpl-left-nav-more-ico-rotate"></i>
+                        </a>
+                        <ul class="tpl-left-nav-sub-menu" style="display: block;">
+                            <li>
+                                <a href="javascript:;">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>Amaze UI 表单</span>
+                                    <i class="am-icon-star tpl-left-nav-content-ico am-fr am-margin-right"></i>
+                                </a>
+
+                                <a href="javascript:;">
+                                    <i class="am-icon-angle-right"></i>
+                                    <span>线条表单</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="tpl-left-nav-item">
+                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+                            <i class="am-icon-key"></i>
+                            <span>登录</span>
+
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+		</div>
+		<div class="mainRight" id="d1">
+			<div class="mainRightNav">
+				
+			</div>
+			<div class="page">
+				
+			</div>
+
+		</div>
+		
+		
+		<!--签到-->
+		<div class="signin mainRight" id="d2">
+			<section class="model-13">
+				<div class="checkbox">
+				    <input type="checkbox"/>
+				    <label></label>
+				</div>
+			</section>
+			<button type="button" value="开启学生签到" onclick='signin("openStudentSignin")'>开启学生签到</button>
+			<button type="button" value="关闭学生签到" onclick='signin("closeStudentSignin")'>关闭学生签到</button>
+			<button type="button" value="开启老师签到" onclick='signin("openTeacherSignin")'>开启老师签到</button>
+			<button type="button" value="关闭老师签到"  onclick='signin("closeTeacherSignin")'>关闭老师签到</button>
+		</div>
+		
+		
+	</div>
+	<script src="js/main.js"></script>
+	<script>
+	function Tab(num){
+		var i=0;
+		for(i=1;i<=4;i++){
+			if(i==num){
+				document.getElementById("d"+i).style.display="block";
+			}else{
+				document.getElementById("d"+i).style.display="none";
+			}
+		}
+	}
+	</script>
+	<script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/amazeui.min.js"></script>
+    <script src="assets/js/iscroll.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

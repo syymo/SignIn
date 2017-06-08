@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>点名宝——管理员</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/index.js"></script>
+	<script>
+	function Tab(num){
+		var i=0;
+		for(i=1;i<=4;i++){
+			if(i==num){
+				document.getElementById("d"+i).style.display="block";
+			}else{
+				document.getElementById("d"+i).style.display="none";
+			}
+		}
+	}
+	</script>
+</head>
+<body>
+	<div class="header clearfix">
+		<div class="logo fl">
+			<img src="images/logo.png">
+			<h1 class="fr">点名宝</h1>
+		</div>
+		<div class="adminInfo fr">
+			<img src="images/4.jpg">
+			<a href="#">管理员</a>
+		</div>
+	</div>
+	<div class="middle clearfix">
+		<div class="mainLeft fl">
+			<ul class="nav">
+				<li class="nav_menu" onmouseover="show(this)" onmouseout="hide(this)">
+					<a href="#" javascript:;>用户信息</a>
+					<ul class="nav_list" id="nav_list">
+						<li><a href="#" onclick="getInfo(1);Tab(1)" javascript:;  >全部学生信息</a></li>
+						<li><a href="#" onclick="Tab(2)">开启签到</a></li>
+						<li><a href="#" onclick="Tab(3)">增加信息</a></li>
+						<li><a href="#">功能功能</a></li>
+						<li><a href="#">功能功能</a></li>
+					</ul>
+				</li>
+				<li class="nav_menu" onmouseover="show(this)" onmouseout="hide(this)">
+					<a href="#">用户用户</a>
+					<ul class="nav_list">
+						<li><a href="#">功能功能</a></li>
+						<li><a href="#">用户用户</a></li>
+						<li><a href="#">用户用户</a></li>
+						<li><a href="#">用户用户</a></li>
+						<li><a href="#">用户用户</a></li>
+					</ul>
+				</li>
+				<li class="nav_menu" onmouseover="show(this)" onmouseout="hide(this)">
+					<a href="#">用户用户</a>
+					<ul class="nav_list">
+						<li><a href="#">用户用户</a></li>
+						<li><a href="#">用户用户</a></li>
+						<li><a href="#">用户用户</a></li>
+						<li><a href="#">用户用户</a></li>
+						<li><a href="#">用户用户</a></li>
+					</ul>
+				</li>
+				<li class="nav_menu" onmouseover="show(this)" onmouseout="hide(this)">
+					<a href="#">用户用户</a>
+					<ul class="nav_list">
+						<li><a href="#">用户用户</a></li>
+						<li><a href="#">用户用户</a></li>
+						<li><a href="#">用户用户</a></li>
+						<li><a href="#">用户用户</a></li>
+						<li><a href="#">用户用户</a></li>
+					</ul>
+				</li>
+				<li class="nav_menu" onmouseover="show(this)" onmouseout="hide(this)">
+					<a href="#">用户用户</a>
+					<ul class="nav_list">
+						<li><a href="#">用户用户</a></li>
+						<li><a href="#">用户用户</a></li>
+						<li><a href="#">用户用户</a></li>
+						<li><a href="#">用户用户</a></li>
+						<li><a href="#">用户用户</a></li>
+					</ul>
+				</li>
+				<li class="nav_menu" onmouseover="show(this)" onmouseout="hide(this)"><a href="#">用户用户</a>
+					<ul class="nav_list">
+						<li><a href="#">用户用户</a></li>
+						<li><a href="#">用户用户</a></li>
+						<li><a href="#">用户用户</a></li>
+						<li><a href="#">用户用户</a></li>
+						<li><a href="#">用户用户</a></li>
+					</ul>
+				</li>
+				<li class="nav_menu" onmouseover="show(this)" onmouseout="hide(this)"><a href="#">用户用户</a>
+					<ul class="nav_list">
+						<li><a href="#">用户用户</a></li>
+						<li><a href="#">用户用户</a></li>
+						<li><a href="#">用户用户</a></li>
+						<li><a href="#">用户用户</a></li>
+						<li><a href="#">用户用户</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="mainRight" id="d1">
+			<!-- <iframe src="index.html" id="myiframe" scrolling="no" onload="changeFrameHeight()" frameborder="0"></iframe> -->
+			<!-- <iframe src="" id="icontent" name="icontent"  scrolling="no"  frameborder="0" ></iframe> -->
+			<h2>全部学生信息</h2>
+			<table cellspacing="0 " class="table">
+				<tr>
+					<td class="operation">选定</td>
+					<td class="sign">签到</td>
+					<td class="sname">姓名</td>
+					<td>学号</td>
+					<td>班级</td>
+					<td>年龄</td>
+					<td>入学时间</td>
+					<td>学院</td>
+					<td>性别</td>
+					<td>操作</td>
+				</tr>
+			</table>
+			<div class="page">
+				<!-- <a href="#">上一页</a>
+				<a href="#" onclick="getInfo(1);">1</a>
+				<a href="#" onclick="getInfo(2);">2</a>
+				<a href="#" onclick="getInfo(3);">3</a>
+				<a href="#">4</a>
+				<a href="#">5</a>
+				<span class="hl">...</span>
+				<a href="#">上一页</a>
+				<span class="morePage">共200页，到第</span>
+				<input type="text" class="pageNum">
+				<span class-"pagen">页</span>
+				<input type="button" value="确定" class="page_btn"> -->
+			</div>
+
+		</div>
+		<div class="signin mainRight" id="d2">
+			<button type="button" value="开启学生签到" onclick='signin("openStudentSignin")'>开启学生签到</button>
+			<button type="button" value="关闭学生签到" onclick='signin("closeStudentSignin")'>关闭学生签到</button>
+			<button type="button" value="开启老师签到" onclick='signin("openTeacherSignin")'>开启老师签到</button>
+			<button type="button" value="关闭老师签到"  onclick='signin("closeTeacherSignin")'>关闭老师签到</button>
+		</div>
+		<div class="addInfo mainRight" id="d3">
+			<h2>添加学生信息</h2>
+			<p><label for="userName">姓名：<input type="text" id="userName"></label></p>
+			<p><label for="userNumber">学号：<input type="text" id="userNumber"></label></p>
+			<p><label for="userPwd">密码：<input type="text" id="userPwd"></label></p>
+			<p><label for="userAge">年龄：<input type="text" id="userAge"></label></p>
+			<p>
+				<from action="" method="get" id="userSex" class="userSex">性别：
+					<label><input name="ssex" type="radio" value="男">男</label>
+					<label><input name="ssex" type="radio" value="女">女</label>
+				</from>
+			</p>
+			<p>入学时间：<select id="userDate">
+					<option value="">请选择入学时间</option>
+					<option value="">2013</option>
+					<option value="">2014</option>
+					<option value="">2015</option>
+					<option value="">2016</option>
+					<option value="">2017</option>
+				</select></p>
+			<p>学院：<select class="userAca">
+					<option value="">选择学院</option>
+				</select>
+			</p>
+			<p>班级：<select class="userClass">
+					<option value="">选择班级</option>
+				</select>
+			</p>
+			<p>
+				<button type="submit" value="取消" id="submit" onclick="addInfo()">确定</button>&nbsp;
+				<button type="reset" value="取消" id="reset">取消</button>
+			</p>
+		</div>
+		
+	</div>
+	<script src="js/main.js"></script>
+</body>
+</html>

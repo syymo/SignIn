@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!--防止360浏览器不加载css-->
+	<title>点名宝——管理员</title>
+	 <!--滑动开关-->
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="icon" type="image/png" href="assets/i/favicon.png">
+    <link rel="stylesheet" href="assets/css/amazeui.min.css" />
+ 
+    <link rel="stylesheet" href="assets/css/app.css">
+    <script src="assets/js/echarts.min.js"></script>
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/index.js"></script>
+	
+
+    <link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div class="headers clearfix">
+		<div class="logo fl">
+			<img src="images/logo.png">
+			<h3 class="fr">点名宝</h3>
+		</div>
+		<div class="adminInfo fr">
+			<img src="images/4.jpg">
+			<a href="#">管理员</a>
+		</div>
+	</div>
+	<div class="middle clearfix">
+		<div class="mainLeft fl">
+			<div class="tpl-left-nav tpl-left-nav-hover">
+	            <div class="tpl-left-nav-list">
+	                <ul class="tpl-left-nav-menu">
+	                    <li class="tpl-left-nav-item" onclick="Tab(1);getInfo(1)">
+	                        <a href="#" class="nav-link active">
+	                            <i class="am-icon-home"></i>
+	                            <span>首页</span>
+	                        </a>
+	                    </li>
+	                    <li class="tpl-left-nav-item" onclick="signinTime();Tab(2)">
+	                        <a href="#" class="nav-link tpl-left-nav-link-list ">
+	                            <i class="am-icon-bar-chart"></i>
+	                            <span>签到设置</span>   
+	                        </a>
+	                    </li>
+
+	                    <li class="tpl-left-nav-item">
+	                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+	                            <i class="am-icon-wpforms"></i>
+	                            <span>表单</span>
+	                            <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right tpl-left-nav-more-ico-rotate"></i>
+	                        </a>
+	                        <ul class="tpl-left-nav-sub-menu" style="display: block;">
+	                            <li onclick="signInfo();Tab(3)">
+	                                <a href="javascript:;">
+	                                    <i class="am-icon-angle-right"></i>
+	                                    <span>签到查询</span>
+	                                    
+	                                </a>
+
+	                                <!-- <a href="javascript:;">
+	                                    <i class="am-icon-angle-right"></i>
+	                                    <span>线条表单</span>
+	                                </a> -->
+	                            </li>
+	                        </ul>
+	                    </li>
+
+	                    <li class="tpl-left-nav-item">
+	                        <a href="javascript:;" class="nav-link tpl-left-nav-link-list">
+	                            <i class="am-icon-key"></i>
+	                            <span>登录</span>
+
+	                        </a>
+	                    </li>
+	                </ul>
+	            </div>
+	        </div>
+        </div>
+		
+		<div class="mainRight" id="d1">
+			<div class="mainRightNav">
+				
+			</div>
+			<div class="page">
+				
+			</div>
+
+		</div>
+		
+		<!-- 添加学生信息（Modal） -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+		            <div class="modal-header">
+		                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		                <h4 class="modal-title" id="myModalLabel">添加学生信息</h4>
+		            </div>
+		            <div class="modal-body addInfo">
+							<p>
+							<label for="userName">姓名：<input type="text" id="userName" name="sname"></label></p>
+							<p>
+							<label for="userNumber">学号：<input type="text" id="userNumber" name="snumber"></label></p>
+							<p><label for="userPwd">密码：<input type="text" id="userPwd" name="spass"></label></p>
+							<p><label for="userAge">年龄：<input type="text" id="userAge" name="sage"></label></p>
+							<p>
+								<from id="userSex" class="userSex">性别：
+									<label><input name="ssex" type="radio" value="男">男</label>
+									<label><input name="ssex" type="radio" value="女">女</label>
+								</from>
+							</p>
+							<p>入学时间：<select id="userDate" name="sdate">
+									<option>请选择入学时间</option>
+									<option name="sdate" value="2013">2013</option>
+									<option name="sdate" value="2014">2014</option>
+									<option name="sdate" value="2015">2015</option>
+									<option name="sdate" value="2016">2016</option>
+									<option name="sdate" value="2017">2017</option>
+								</select></p>
+							<p>学院：<select class="userAca" name="aid">
+									<option value="">选择学院</option>
+								</select>
+							</p>
+							
+		            </div>
+		            <div class="modal-footer">
+		               <button class='btn btn-primary' type="submit" value="取消" id="submit"  onclick="addInfo()">提交信息</button >&nbsp;
+						<button class='btn btn-default' data-dismiss="modal" type="reset" value="取消" id="reset">关闭</button>
+		            </div>
+		        </div><!-- .modal-content -->
+		    </div><!-- /.modal -->
+		</div>
+		<!-- 修改学生信息（Modal） -->
+		<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog ">
+			    <div class="modal-content">
+			        <div class="modal-header">
+			            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			            <h4 class="modal-title" id="myModalLabel">修改学生信息</h4>
+			        </div>
+			        <div class="modal-body correctInfo addInfo">
+			         
+			        </div>   
+			        <div class="modal-footer">
+			            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+			            <button type="button" class="btn btn-primary btn-correctInfo">提交更改</button>
+			        </div>
+			    </div><!-- /.modal-content -->
+			</div><!-- /.modal -->
+		</div>
+		<!--签到-->
+		<div class="signin mainRight" id="d2">
+			<div class="signinleft clearfix">
+				<h1 class="signintitle">签到方式设置</h1>
+					<div class="signintime fl">
+						<label><h3>手动开启签到：</h3></label>
+						<section class="model-13">
+							<div class="checkbox">
+							    <input type="checkbox"/>
+							    <label></label>
+							</div>
+						</section></br>
+						<label><h3>自动签到时间设置：</h3>
+							<div class="h_3"></div>
+							签到名称<input type="text" class="signname" value=""/>
+						<p>
+							开始时间：
+							<select class="starthours"></select>	:
+							<select class="startminutes"></select>
+							<input type="text" class="starttime" />
+						</p>
+						<p>
+							结束时间：
+							<select class="stophours"><option>00</option></select>	:
+							<select class="stopminutes"><option>00</option></select>
+							<input type="text" class="stoptime" />
+							<button id="signtimebtn">添加</button>
+						</p>
+						<p>
+							<label class="addsigntime"> </label>
+						</p>
+						</label>
+					</div>
+					<div class="signinway fl">
+						<label><span>wifi签：</span>
+							<input name="signin" type="radio" value="mac">
+							<p>mac地址：<input type="text" class="mac"/></p>
+						</label>
+						<label class="location"><span>定位签：</span>
+						<input name="signin" value="location" type="radio">
+							<p>中心经度：<input type="text" class="longitude" /></p>
+							<p>中心纬度：<input type="text" class="latitude"/></p>
+							<p>签到半径(单位:米(m))：<input type="text" class="radius" /></p>
+						</label>
+						<div class="addsigninway">正在获取目前签到方式！</div>
+						<button id="signbtn" class="btn btn-primary singbtn">提交
+						</button></br>
+
+						<span class="fr signinwaylable">以信息均属于上次输入的内容<span>
+					</div>
+			</div>
+			<div class="signinright">
+				
+			</div>
+		</div>
+
+		<!--签到查询-->
+		<div class="signinInfo mainRight" id="d3">
+						123
+		</div>
+	</div>
+		
+	
+	<script src="js/main.js"></script>
+	<script>
+	function Tab(num){
+		var i=0;
+		for(i=1;i<=4;i++){
+			if(i==num){
+				document.getElementById("d"+i).style.display="block";
+			}else{
+				document.getElementById("d"+i).style.display="none";
+			}
+		}
+		
+	}
+	</script>
+	
+    <script src="assets/js/amazeui.min.js"></script>
+    <script src="assets/js/app.js"></script>
+
+</body>
+</html>
+
