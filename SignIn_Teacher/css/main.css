@@ -277,12 +277,12 @@ label{
 	border:1px solid #ccc;
 	text-indent:5px;
 }
-.signin label button{
+/* .signin label button{
 	border-radius:3px;
 	font-size:15px;
 	height:24px;
 	
-}
+} */
 .signin label select{
 	border-radius:0px;
 
@@ -376,14 +376,12 @@ label{
 }
 
 @media screen and (max-width: 1000px) {
-  	.mainRight {
-        padding-left: 0;
-    }
-
-}
-@media screen and (max-width: 850px) {
-    .signin .signintitle{
-		margin-left:150px;
+	.mainLeft{
+		width:100px;
 	}
+  	.mainRight {
+  	        padding-left: 135px;
+  	        width:100%;
+  	    } 
 
 }

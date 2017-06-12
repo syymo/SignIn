@@ -167,16 +167,15 @@ body {
 
 @media screen and (max-width: 1000px) {
     .tpl-left-nav-hover {
-        display: none;
-        width: 100%;
+        /* display: none; */
+        width: 120px;
         margin-bottom: 10px;
     }
     .tpl-left-nav-list {
         width: 100%;
     }
-    
-    .mainRight {
-        padding-left: 0;
+    .tpl-left-nav-list ul{
+        padding-left:0;
     }
 
 }

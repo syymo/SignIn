@@ -549,8 +549,7 @@ function signinTime(){
 							if(data.status==200){
 								alert("添加 签到时间 成功");
 								$(".signintime .addsigntime").text("添加成功！");
-								 location.reload();
-
+								 signinTime();
 							}else{
 								alert("添加 签到时间 失败！")
 							}
@@ -744,13 +743,19 @@ function signinTime(){
 				var signintime=data.data[i];
 				$(".signtime").append("<tr oid="+signintime.oid+"><td>"+signintime.oname+"</td>"+
 				"<td>"+signintime.starttime+"</td>"+
-				"<td>"+signintime.stoptime+"</td><td><button class='btn btn-primary' data-toggle='modal' data-target='#myModal1'><span class='am-icon-pencil-square-o'></span>修改</button> <button class='btn btn-primary delesignintime' data-toggle='modal' data-target='' style='background: #F91028;border:1px solid #F91028' ><span class='am-icon-trash-o' ></span>删除</button>  </td></tr>")
+				"<td>"+signintime.stoptime+"</td><td> <button class='btn btn-primary delesignintime' data-toggle='modal' data-target='' style='background: #F91028;border:1px solid #F91028' ><span class='am-icon-trash-o' ></span>删除</button>  </td></tr>")
 			}
-
+			//删除时间
 			$(".signtime .delesignintime").click(function(){
 				var oid=$(this).parent().parent().attr("oid");
 				//console.log(oid);
 				delesigntime(oid);
+				overSignTime(oid);
+			})
+			//修改时间
+			$(".signtime .btn-over").click(function(){
+				var oid=$(this).parent().parent().attr("oid");
+				overSignTime(oid);
 			})
 
 		}
@@ -787,6 +792,11 @@ function delesigntime(ids){
 	
 }
 
+
+function overSignTime(ids){
+	console.log(ids);
+	/*<button class='btn btn-primary btn-over' data-toggle='modal' data-target='#myModal3'><span class='am-icon-pencil-square-o '></span>修改</button>*/
+}
 
 //mac地址：28:f0:76:18:82:f6
 //中心经度108.913018
