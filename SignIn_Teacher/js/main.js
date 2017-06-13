@@ -147,14 +147,14 @@ function listPage(aca){
 
 
 
-//删除学生信息
+//删除老师信息
 function deleInfo(i){
 	if(confirm("是否删除此老师？")){
     	//deleInfo(i);
 	    var urls=url+"AdminTeacher/delete.action?ids="+i;
 		$.getJSON(urls,function(res){
 			if(res.status==200){
-	            alert("删除成功！！！");
+	            //alert("删除成功！！！");
 	            //console.log(pn);
 	            getInfo(1);
 	        }else{
@@ -168,7 +168,7 @@ function deleInfo(i){
 }
 
 
-//添加学生
+//添加老师
 function addInfo(){
 	//var userName=document.getElmentById("userName").value;
 	var sname=$("#userName").val();
@@ -526,50 +526,7 @@ function signinTime(){
 		$(".stoptime").val($(".stophours").find("option:selected").val()+":"+$(".stopminutes").find("option:selected").val());
 	})
 
-	$("#signtimebtn").click(function(){
-		var signname=$(".signname").val();
-		var starttime=$(".starttime").val();
-		var stoptime=$(".stoptime").val();
-		//判断 签到名称、签到开始时间、结束时间 是否为空
-		if(signname !==null && signname !==undefined && signname !== ""){
-			if(starttime !==null && starttime!==undefined && starttime!== ""){
-				if(stoptime!==null && stoptime !==undefined && stoptime !==""){
-					//console.log(starttime);
-					//console.log(stoptime);
-					$.ajax({
-						url:url+'AdminOperate/add.action?',
-						type:'post',
-						data:{
-							oname:signname,
-							starttime:starttime,
-							stoptime:stoptime
-						},
-						dataType:'json',
-						success:function(data){
-							if(data.status==200){
-								alert("添加 签到时间 成功");
-								$(".signintime .addsigntime").text("添加成功！");
-								 signinTime();
-							}else{
-								alert("添加 签到时间 失败！")
-							}
-						},
-						error:function(){
-							alert("请检查网络！！！")
-						}
-					})
-					
-				}else{
-					alert("请输入签到结束时间");
-				}
-			}else{
-				alert("请输入签到开始时间");
-			}	
-		}else{
-			alert("请输入签到名称");
-		}
-
-	});
+	
 
     /*$("#signtimebtn").click(function(){
     	if($(this).text()=="确定"){
@@ -764,9 +721,51 @@ function signinTime(){
 	
 }
 //signinTime();
-//手动开启签到
-
 //删除时间段
+$("#signtimebtn").click(function(){
+	var signname=$(".signname").val();
+	var starttime=$(".starttime").val();
+	var stoptime=$(".stoptime").val();
+	//判断 签到名称、签到开始时间、结束时间 是否为空
+	if(signname !==null && signname !==undefined && signname !== ""){
+		if(starttime !==null && starttime!==undefined && starttime!== ""){
+			if(stoptime!==null && stoptime !==undefined && stoptime !==""){
+				//console.log(starttime);
+				//console.log(stoptime);
+				$.ajax({
+					url:url+'AdminOperate/add.action?',
+					type:'post',
+					data:{
+						oname:signname,
+						starttime:starttime,
+						stoptime:stoptime
+						},
+					dataType:'json',
+					success:function(data){
+						if(data.status==200){
+							alert("添加 签到时间 成功");
+							$(".signintime .addsigntime").text("添加成功！");
+								 signinTime();
+						}else{
+								alert("添加 签到时间 失败！")
+						}
+					},
+					error:function(){
+						alert("请检查网络！！！")
+					}
+				})
+					
+			}else{
+				alert("请输入签到结束时间");
+			}
+		}else{
+			alert("请输入签到开始时间");
+		}	
+	}else{
+		alert("请输入签到名称");
+	}
+});
+
 function delesigntime(ids){
 	if(confirm("是否删除此时间段？")){
 		$.ajax({
@@ -778,7 +777,7 @@ function delesigntime(ids){
 			dataType:'json',
 			success:function(data){
 				if(data.status==200){
-					alert("删除成功");
+					$(".signintime .addsigntime").text("删除成功！");
 					signinTime();
 				}
 			},
