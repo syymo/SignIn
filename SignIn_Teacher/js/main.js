@@ -196,21 +196,21 @@ function addInfo(){
 			dataType:'json',
 			success:function(data){
 				if(data.status==200){
-					alert("添加学生信息成功！");
+					alert("添加老师信息成功！");
 					window.location.reload();//刷新当前页面.
 				}else{
-					alert("添加学生信息失败！请重新填写");
+					alert("添加老师信息失败！请重新填写");
 				}
 				getInfo(1);
 			},
 			error:function(){
-				alert("添加学生信息失败！请检查你的网络！")
+				alert("添加老师信息失败！请检查你的网络！")
 			}
 		})
 }
 
 
-//修改学生信息
+//修改信息
 function correctInfo(arr){
 	listPage("userAcas");
 	var urls=url+"AdminTeacher/update.action?"
